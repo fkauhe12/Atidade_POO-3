@@ -1,0 +1,29 @@
+package br.com.estacio.empresa.model;
+
+public class Assalariado extends Funcionario {
+    // Atributos
+    private double salario;
+
+    // Construtor
+    public Assalariado(String nome, String cpf, int idade, double salario) {
+        super(nome, cpf, idade);
+        this.salario = salario;
+    }
+
+    // encapsulamento
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    // Métodos
+    @Override
+    public void exibirDados() {
+        super.exibirDados();
+        System.out.println("Salário: " + this.salario);
+    }
+    
+}
