@@ -1,6 +1,8 @@
 package br.com.estacio.empresa.model;
+import br.com.estacio.empresa.interfaces.Autenticavel;
 
-public class Assalariado extends Funcionario {
+
+public class Assalariado extends Funcionario implements Autenticavel {
     // Atributos
     private double salario;
 
@@ -24,6 +26,11 @@ public class Assalariado extends Funcionario {
     public void exibirDados() {
         super.exibirDados();
         System.out.println("Salário: " + this.salario);
+    }
+
+    @Override
+    public boolean autenticar(String senha) {
+        return true;
     }
     
 }
